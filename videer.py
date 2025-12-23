@@ -16,7 +16,7 @@ def check_dependencies():
         missing_deps.append("requests")
     
     try:
-        import PIL
+        import PIL  # Check if Pillow is installed
     except ImportError:
         missing_deps.append("Pillow")
     

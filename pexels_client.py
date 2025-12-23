@@ -3,7 +3,7 @@ Pexels API client for fetching open source videos
 """
 import requests
 import os
-from typing import List, Dict, Optional
+from typing import Dict, Optional
 
 
 class PexelsClient:
