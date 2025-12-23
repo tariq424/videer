@@ -101,7 +101,9 @@ class PexelsClient:
         """
         try:
             # Create directory if it doesn't exist
-            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            output_dir = os.path.dirname(output_path)
+            if output_dir:
+                os.makedirs(output_dir, exist_ok=True)
             
             response = requests.get(video_url, stream=True, timeout=30)
             response.raise_for_status()
@@ -123,7 +125,7 @@ class PexelsClient:
         
         Args:
             video_data: Video data from Pexels API
-            quality: Preferred quality - "hd", "sd", or "original"
+            quality: Preferred quality - "hd" or "sd"
         
         Returns:
             Video file URL or None if not found

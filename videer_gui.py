@@ -334,7 +334,7 @@ class VideerApp:
         
         downloaded = 0
         for idx, video in enumerate(self.search_results, 1):
-            video_url = self.pexels_client.get_video_file(video, quality=quality)
+            video_url = PexelsClient.get_video_file(video, quality=quality)
             
             if video_url:
                 filename = f"video_{video.get('id')}_{idx}.mp4"
