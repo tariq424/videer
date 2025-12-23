@@ -40,7 +40,7 @@ def example_search_and_download():
             print(f"   User: {video['user']['name']}")
             
             # Get video file URL
-            video_url = client.get_video_file(video, quality="hd")
+            video_url = PexelsClient.get_video_file(video, quality="hd")
             if video_url:
                 print(f"   Download URL: {video_url}")
                 
