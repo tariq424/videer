@@ -12,3 +12,14 @@ concat_list.txt
 .vscode/
 *.log
 .DS_Store
+
+# Unrelated local files to ignore (keep repo focused on videer_gui.py)
+inputs/
+narration.txt
+src/pexel_test.py
+src/pexel_test.sh
+src/videer_gui.lastgood.py
+src/videer_gui.ok.py
+src/videer_gui_working.py
+src/videer_wsl.py
+videer_wsl.code-workspace
