@@ -102,7 +102,7 @@ class PexelsClient:
         try:
             # Create directory if it doesn't exist
             output_dir = os.path.dirname(output_path)
-            if output_dir:
+            if output_dir:  # Only create if there's a directory component
                 os.makedirs(output_dir, exist_ok=True)
             
             response = requests.get(video_url, stream=True, timeout=30)
@@ -114,7 +114,7 @@ class PexelsClient:
                         f.write(chunk)
             
             return True
-        except requests.exceptions.RequestException as e:
+        except (requests.exceptions.RequestException, OSError, IOError) as e:
             print(f"Error downloading video: {e}")
             return False
     
