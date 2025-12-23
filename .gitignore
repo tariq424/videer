@@ -1,0 +1,14 @@
+.venv/
+work/
+outputs/
+__pycache__/
+*.pyc
+concat_list.txt
+
+# local env / editor / logs
+.env
+.envrc
+.venv/
+.vscode/
+*.log
+.DS_Store
